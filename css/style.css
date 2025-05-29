@@ -1,0 +1,606 @@
+/* --- Global & Typography Enhancements --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for the page */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    color: #2c3e50; /* Darker, slightly desaturated blue for headings */
+    margin-bottom: 0.8em;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+
+p {
+    margin-bottom: 1.2em;
+    color: #555;
+}
+
+a {
+    color: #3498db; /* A pleasant blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* --- Elementor Section & Container Enhancements --- */
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1200px; /* Or your preferred max width */
+}
+
+.e-con, .elementor-section { /* Add some default vertical spacing to sections */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.e-con-inner, .elementor-widget-wrap {
+    /* This helps with some Elementor layout quirks if flex items aren't behaving */
+}
+
+/* Specific background for key sections if desired */
+.elementor-element-f53998e { /* Hero section container */
+    background-color: #ffffff; /* White for hero */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.elementor-element-ad09c7e { /* "Neden Biz?" intro section */
+   background-color: #fff;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
+}
+
+.elementor-element-e2f2001 { /* "IPTV PAKETLERİ" intro section */
+    background-color: #f0f4f8; /* Light cool gray */
+}
+
+.elementor-element-b907a8a { /* Sıkça Sorulan Sorular section */
+    background-color: #ffffff;
+}
+.elementor-element-c3d896f { /* Kullanıcı Yorumları section */
+    background-color: #f0f4f8;
+}
+
+
+/* --- Header Enhancements --- */
+#masthead .elementor-element-478750a { /* Main header container */
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.hfe-nav-menu .hfe-menu-item {
+    font-weight: 500;
+    color: #333 !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px !important;
+    border-radius: 4px;
+}
+
+.hfe-nav-menu .hfe-menu-item:hover,
+.hfe-nav-menu .current-menu-item > .hfe-menu-item {
+    color: #3498db !important; /* Highlight color for hover/active */
+    background-color: #f0f4f8 !important;
+}
+
+.hfe-nav-menu .sub-menu {
+    background-color: #ffffff !important;
+    border-radius: 0 0 8px 8px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    border: 1px solid #eee !important;
+    border-top: none !important; /* Remove top border if it has one from main menu item */
+}
+
+.hfe-nav-menu .sub-menu .hfe-sub-menu-item {
+    color: #444 !important;
+    padding: 12px 20px !important;
+}
+
+.hfe-nav-menu .sub-menu .hfe-sub-menu-item:hover {
+    background-color: #f0f4f8 !important;
+    color: #3498db !important;
+}
+
+/* --- Hero Section --- */
+.elementor-element-6574aeb .sina-fancytext h1 { /* Fancy text heading */
+    font-size: 2.5em; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+.elementor-element-6574aeb .sina-fancytext-prefix,
+.elementor-element-6574aeb .sina-fancytext-strings {
+    color: #2c3e50;
+}
+.elementor-element-67afc4e p { /* Hero subtitle */
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Assuming hero text is centered */
+}
+@media (max-width: 767px) {
+    .elementor-element-6574aeb .sina-fancytext h1 { font-size: 2em; }
+    .elementor-element-67afc4e p { font-size: 1em; }
+}
+
+/* --- "Neden Biz?" Boxes --- */
+.elementor-element-ef98fec,
+.elementor-element-e75bb51,
+.elementor-element-c6cad9b {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px; /* Add space between cards if they stack on mobile */
+}
+
+.elementor-element-ef98fec:hover,
+.elementor-element-e75bb51:hover,
+.elementor-element-c6cad9b:hover {
+    transform: translateY(-8px) scale(1.03); /* Lift and slightly enlarge */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.elementor-element-ef98fec .elementor-icon svg,
+.elementor-element-e75bb51 .elementor-icon svg,
+.elementor-element-c6cad9b .elementor-icon svg {
+    fill: #3498db; /* Icon color */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.elementor-element-ef98fec .sina-title-title,
+.elementor-element-e75bb51 .sina-title-title,
+.elementor-element-c6cad9b .sina-title-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.elementor-element-ef98fec .elementor-widget-text-editor p,
+.elementor-element-e75bb51 .elementor-widget-text-editor p,
+.elementor-element-c6cad9b .elementor-widget-text-editor p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- IPTV Paketleri Cards --- */
+.elementor-element-20db779, /* Türkiye Paketleri Card */
+.elementor-element-2357234 { /* Yurtdışı Paketleri Card */
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom if content varies */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.elementor-element-20db779:hover,
+.elementor-element-2357234:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.elementor-element-20db779 .sina-title-title,
+.elementor-element-2357234 .sina-title-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.elementor-element-20db779 .elementor-widget-image img,
+.elementor-element-2357234 .elementor-widget-image img {
+    border-radius: 6px;
+    margin-bottom: 20px;
+    max-width: 80%; /* Control image size within card */
+    height: auto;
+    display: inline-block;
+}
+
+
+/* --- General Button Styling --- */
+.elementor-button {
+    background-color: #3498db !important;
+    color: #ffffff !important;
+    border-radius: 25px !important; /* Pill shape */
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: none !important;
+}
+
+.elementor-button:hover {
+    background-color: #2980b9 !important; /* Darker blue on hover */
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+}
+
+/* --- Sıkça Sorulan Sorular (Accordion) --- */
+.sina-accordion-item {
+    margin-bottom: 10px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    transition: box-shadow 0.3s ease;
+}
+.sina-accordion-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.sina-accordion-header {
+    background-color: #f7f9fc !important;
+    color: #333 !important;
+    padding: 18px 20px !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    border-radius: 6px 6px 0 0 !important; /* Rounded top corners */
+    transition: background-color 0.3s ease;
+}
+.sina-accordion-item.active .sina-accordion-header {
+    background-color: #e9f3fd !important; /* Lighter blue for active header */
+    color: #2980b9 !important;
+    border-bottom: 1px solid #d0e0f0;
+}
+
+.sina-accordion-body {
+    padding: 20px !important;
+    background-color: #ffffff !important;
+    border-radius: 0 0 6px 6px !important; /* Rounded bottom corners */
+}
+.sina-accordion-desc {
+    color: #555;
+    line-height: 1.7;
+}
+.sina-accordion-icon i {
+    color: #3498db !important;
+}
+
+/* --- Testimonial Carousel --- */
+.sina-review-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.sina-review-face {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    margin-bottom: 15px !important;
+    border: 3px solid #3498db;
+    padding: 3px;
+    background-color: #fff;
+}
+
+.sina-review-name {
+    font-size: 1.2em;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sina-review-comment {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.sina-review-carousel .owl-dots .owl-dot span {
+    background: #ccc !important;
+}
+.sina-review-carousel .owl-dots .owl-dot.active span,
+.sina-review-carousel .owl-dots .owl-dot:hover span {
+    background: #3498db !important;
+}
+.sina-review-carousel .owl-nav button.owl-prev,
+.sina-review-carousel .owl-nav button.owl-next {
+    color: #3498db !important;
+    font-size: 24px !important;
+    background: #fff !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sina-review-carousel .owl-nav button.owl-prev:hover,
+.sina-review-carousel .owl-nav button.owl-next:hover {
+    background: #3498db !important;
+    color: #fff !important;
+}
+
+/* --- Footer Enhancements --- */
+.elementor-element-f7b1c5e { /* Main footer container */
+    background-color: #2c3e50 !important; /* Dark footer background */
+    color: #bdc3c7 !important; /* Light gray text for footer */
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
+}
+
+.elementor-element-f7b1c5e .sina-title-title,
+.elementor-element-f7b1c5e h2 {
+    color: #ffffff !important;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.elementor-element-f7b1c5e p,
+.elementor-element-f7b1c5e .elementor-widget-text-editor {
+    color: #ecf0f1 !important;
+    font-size: 0.95em;
+}
+.elementor-element-f7b1c5e .elementor-widget-text-editor a {
+    color: #3498db !important; /* Link color in footer description */
+    font-weight: 500;
+}
+.elementor-element-f7b1c5e .elementor-widget-text-editor a:hover {
+    color: #5dade2 !important;
+}
+
+.elementor-element-f7b1c5e .elementor-icon-list-item a,
+.elementor-element-f7b1c5e .elementor-icon-list-text {
+    color: #ecf0f1 !important;
+    transition: color 0.3s ease;
+    padding-bottom: 8px;
+}
+
+.elementor-element-f7b1c5e .elementor-icon-list-item a:hover .elementor-icon-list-text {
+    color: #3498db !important; /* Highlight color for footer links */
+}
+
+.elementor-element-8744c7c { /* Copyright section container */
+    background-color: #233140 !important; /* Slightly darker than main footer */
+    color: #bdc3c7 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-top: 30px;
+}
+
+.hfe-copyright-wrapper, .hfe-copyright-wrapper a {
+    color: #bdc3c7 !important;
+    font-size: 0.9em;
+}
+.hfe-copyright-wrapper a:hover {
+    color: #ffffff !important;
+}
+
+/* --- JoinChat WhatsApp Button - Minor Adjustments --- */
+
+/* Main Button (FAB) */
+.joinchat__button {
+    background-color: #25D366 !important; /* WhatsApp Green */
+    border-radius: 50% !important;
+    width: 60px !important; /* Consistent size */
+    height: 60px !important; /* Consistent size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important;
+    cursor: pointer;
+    overflow: hidden; /* Hide sendtext initially if it overflows */
+}
+
+.joinchat__button:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Icon inside the button (WhatsApp logo or Send icon) */
+.joinchat__button__open {
+    /* If the plugin uses a background image for the icon, you might adjust it here.
+       If it's an SVG directly or ::before/::after, target those.
+       The provided HTML has an empty div, so the plugin likely styles this.
+       Let's assume it uses an SVG or font icon that inherits color. */
+}
+
+.joinchat__button svg.joinchat__button__send {
+    width: 28px !important; /* Adjust size as needed */
+    height: 28px !important; /* Adjust size as needed */
+    stroke: white !important; /* Color of the SVG lines */
+}
+/* If the plugin swaps to a different SVG or icon for the open state, style that too */
+/* For example, if it uses a font icon in .joinchat__button__open::before */
+.joinchat__button__open::before {
+    color: white !important;
+    font-size: 28px !important; /* Adjust if it's a font icon */
+}
+
+
+/* "Open chat" text - often shown on hover or as a small label */
+.joinchat__button__sendtext {
+    position: absolute;
+    right: calc(100% + 10px); /* Position to the left of the button */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.joinchat__button:hover .joinchat__button__sendtext {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Chat Box */
+.joinchat__box {
+    width: 340px !important; /* A good standard width */
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    overflow: hidden; /* Ensures children conform to border-radius */
+    background-color: #f0f0f0; /* Light background for the chat area */
+}
+
+/* Chat Box Header */
+.joinchat__header {
+    background-color: #075E54 !important; /* WhatsApp Dark Teal */
+    color: white !important;
+    padding: 12px 15px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-weight: 500;
+}
+
+
+.joinchat__powered {
+    font-size: 11px !important;
+    opacity: 0.8;
+    color: #e0e0e0 !important; /* Lighter text for powered by */
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+}
+.joinchat__powered svg {
+    height: 14px !important; 
+    width: auto !important;
+    margin-left: 5px;
+}
+.joinchat__powered svg path {
+    fill: #e0e0e0 !important;
+}
+.joinchat__powered:hover {
+    opacity: 1;
+}
+
+
+.joinchat__close {
+    font-size: 22px !important; 
+    color: white !important;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    padding: 5px; 
+}
+
+.joinchat__close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Chat Box Scrollable Content Area */
+.joinchat__box__scroll {
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+/* .joinchat__message {
+    background-color: #DCF8C6 !important; 
+    color: #303030 !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    margin: 15px !important;
+    display: inline-block; 
+    max-width: 85%; /
+    line-height: 1.5 !important;
+    position: relative; 
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+} */
+
+.joinchat__box {
+    border-radius: 10px !important;
+}
+.joinchat__header {
+    background-color: #128C7E !important; 
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .elementor-element-ef98fec,
+    .elementor-element-e75bb51,
+    .elementor-element-c6cad9b {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .elementor-element-20db779,
+    .elementor-element-2357234 {
+        margin-bottom: 30px;
+    }
+     .elementor-element-20db779:last-child,
+    .elementor-element-2357234:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .joinchat__button__sendtext {
+        display: none !important; /* Hide on very small screens to prevent layout issues */
+    }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+
+    .e-con, .elementor-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #masthead .elementor-element-478750a { /* Main header container */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .hfe-nav-menu__toggle {
+        margin-right: 15px; /* Space for hamburger */
+    }
+    .hfe-nav-menu__layout-horizontal {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .elementor-element-b907a8a .e-con-inner > .elementor-element-f5e8044 { /* FAQ Text Column */
+        order: 2; /* Put text below image on mobile if needed */
+    }
+    .elementor-element-b907a8a .e-con-inner > .elementor-element-7c2c0c6 { /* FAQ Image Column */
+        order: 1;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .elementor-element-bb8774b img {
+        max-width: 250px !important;
+    }
+
+    /* Footer columns stack */
+    .elementor-element-f7b1c5e .e-con-inner > .e-child {
+        width: 100% !important;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .elementor-element-f7b1c5e .elementor-icon-list-items {
+        text-align: center;
+    }
+}
